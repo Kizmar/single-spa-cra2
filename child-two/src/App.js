@@ -1,28 +1,31 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 
+// SINGLE-SPA NOTES
+// - Import global CSS in index.js so it's not included in the Single-spa app package
+// - Styles specific to this app only should be imported in App.js
+
 class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
-  }
+	render() {
+		const styles = {
+			wrapper: {
+				color: '#ffffff',
+				backgroundColor: 'Blue',
+				border: '4px solid CornflowerBlue',
+				padding: 20
+			}
+		};
+		return (
+			<div className="App" style={styles.wrapper}>
+				I AM CHILD TWO APP
+      		</div>
+		);
+	}
+
+	componentDidCatch(error, info) {
+		console.log('Child Two App Error:', error);
+		console.log('Child Two App Error Info:', info);
+	}
 }
 
 export default App;
