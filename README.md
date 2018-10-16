@@ -12,3 +12,8 @@ To run this:
   - Run `yarn serve` inside `child-one`
   - Run `yarn serve` inside `child-two`
   - Run `yarn start` inside `parent`
+
+Additional Resources:
+- [create-react-app](https://github.com/facebook/create-react-app)
+- [Single-spa Getting Started](https://single-spa.js.org/docs/getting-started-overview.html)
+- [Single-spa-react](https://single-spa.js.org/docs/ecosystem-react.html)
